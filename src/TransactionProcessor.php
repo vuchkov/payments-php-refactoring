@@ -41,7 +41,11 @@ class TransactionProcessor
 
     private function isEu($countryCode)
     {
-        $euCountries = [...]; // List of EU country codes
+        $euCountries = [
+            'AT', 'BE', 'BG', 'CY', 'CZ', 'DE', 'DK', 'EE', 'ES', 'FI', 'FR',
+            'GR', 'HR', 'HU', 'IE', 'IT', 'LT', 'LU', 'LV', 'MT', 'NL', 'PO',
+            'PT', 'RO', 'SE', 'SI', 'SK'
+        ]; // List of EU country codes
         return in_array($countryCode, $euCountries);
     }
 }
