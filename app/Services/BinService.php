@@ -16,7 +16,7 @@ class BinService
         $response = file_get_contents($this->apiUrl . $bin);
 
         if ($response === false) {
-            throw new Exception('Error fetching BIN data.');
+            throw new \Exception('Error fetching BIN data.');
         }
 
         $data = json_decode($response);
@@ -25,7 +25,7 @@ class BinService
             return $data->country->alpha2; // Return country code
         }
 
-        throw new Exception('Invalid BIN data received.');
+        throw new \Exception('Invalid BIN data received.');
     }
 }
 

@@ -16,7 +16,7 @@ class ExchangeRateService
         $response = file_get_contents($this->apiUrl);
 
         if ($response === false) {
-            throw new Exception('Error fetching exchange rates.');
+            throw new \Exception('Error fetching exchange rates.');
         }
 
         $data = json_decode($response, true);
@@ -25,6 +25,6 @@ class ExchangeRateService
             return $data['rates'][$currency]; // Return exchange rate for the specified currency
         }
 
-        throw new Exception('Invalid currency code or rate not available.');
+        throw new \Exception('Invalid currency code or rate not available.');
     }
 }
