@@ -1,5 +1,10 @@
 <?php
 
+namespace App;
+
+use App\Services\BinService;
+use App\Services\ExchangeRateService;
+
 class TransactionProcessor
 {
     private $binService;

@@ -1,8 +1,11 @@
 <?php
 
-require_once realpath(__DIR__ . '/../vendor/autoload.php');
+namespace Tests;
 
 use PHPUnit\Framework\TestCase;
+use App\Services\BinService;
+use App\Services\ExchangeRateService;
+use App\TransactionProcessor;
 
 class TransactionProcessorTest extends TestCase
 {
