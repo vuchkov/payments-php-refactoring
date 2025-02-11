@@ -2,9 +2,9 @@
 
 ## Objective
 
-Refactor the provided PHP code to improve readability, maintainability, and 
-extendibility. Additionally, write unit tests to ensure the functionality 
-remains consistent and reliable.
+Refactor the provided PHP code (`api.php`) to improve readability, 
+maintainability, and extendibility. Additionally, write unit tests to ensure 
+the functionality remains consistent and reliable.
 
 ## Code Refactoring Plan
 
@@ -25,13 +25,15 @@ amounts to the nearest cent.
 
 ### 3. Refactored Code Structure
 
-- Create class: `TransactionProcessor.php`
-- Add PHPUnit test: `tests/TransactionProcessorTest.php`, it is required (`phpunit/phpunit`):
-```php
+- Create class: `app/TransactionProcessor.php`
+
+- Add PHPUnit (`phpunit/phpunit`) and test: `tests/TransactionProcessorTest.php`
+```bash
 composer install
 vendor/bin/phpunit tests/TransactionProcessorTest.php
 ```
 
+- Create main class: `app/TransactionProcessor.php`:
 ```php
 <?php
 
@@ -81,3 +83,5 @@ class TransactionProcessor
     }
 }
 ```
+
+- Add the refactored code in: `index.php`
