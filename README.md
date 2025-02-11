@@ -2,23 +2,35 @@
 
 ## Objective
 
-Refactor the provided PHP code to improve readability, maintainability, and extendibility. Additionally, write unit tests to ensure the functionality remains consistent and reliable.
+Refactor the provided PHP code to improve readability, maintainability, and 
+extendibility. Additionally, write unit tests to ensure the functionality 
+remains consistent and reliable.
 
 ## Code Refactoring Plan
 
 ### 1. Analyze the Existing Code
 
-The original code reads transaction data from a file, processes it to calculate commissions based on the card's BIN number and currency, and outputs the results.
+The original code reads transaction data from a file, processes it to calculate
+commissions based on the card's BIN number and currency, and outputs the results.
 
 ### 2. Key Improvements
 
 - **Use of Classes**: Implement object-oriented principles to encapsulate functionality.
 - **Error Handling**: Replace `die()` with exceptions for better error management.
-- **Dependency Injection**: Allow for easier substitution of external services (e.g., BIN lookup, currency rates).
+- **Dependency Injection**: Allow for easier substitution of external services 
+(e.g., BIN lookup, currency rates).
 - **Input Validation**: Ensure input data is validated before processing.
-- **Commission Ceiling**: Implement a ceiling function to round up commission amounts to the nearest cent.
+- **Commission Ceiling**: Implement a ceiling function to round up commission 
+amounts to the nearest cent.
 
 ### 3. Refactored Code Structure
+
+- Create class: `TransactionProcessor.php`
+- Add PHPUnit test: `tests/TransactionProcessorTest.php`, it is required (`phpunit/phpunit`):
+```php
+composer install
+vendor/bin/phpunit tests/TransactionProcessorTest.php
+```
 
 ```php
 <?php
